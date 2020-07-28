@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des produits - {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-lg-3">
+                    <div class="card mt-3 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p>{{ product.description }}</p>
+                            <p><strong>{{ product.price / 100 }} €</strong></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
