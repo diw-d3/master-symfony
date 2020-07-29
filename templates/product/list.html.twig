@@ -13,7 +13,7 @@
                             <p>{{ product.description }}</p>
                             <p><strong>{{ product.price / 100 }} €</strong></p>
 
-                            <a href="{{ path('product_show', {id: product.id}) }}"
+                            <a href="{{ path('product_show', {slug: product.slug}) }}"
                                class="btn btn-secondary"
                             >
                                 Voir
