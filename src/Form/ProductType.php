@@ -17,9 +17,13 @@ class ProductType extends AbstractType
             ->add('slug')
             ->add('description')
             ->add('category', null, [
+                'expanded' => false,
                 'choice_label' => function ($category) {
                     return $category->getName();
                 },
+            ])
+            ->add('tags', null, [
+                'expanded' => true,
             ])
             ->add('price', MoneyType::class, [
                 'divisor' => 100,
