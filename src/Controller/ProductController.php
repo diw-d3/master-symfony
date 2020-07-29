@@ -77,7 +77,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/product/{page}", name="product_list")
+     * @Route("/product/{page}", name="product_list", requirements={"page"="\d+"})
      */
     public function list($page = 1, ProductRepository $productRepository)
     {

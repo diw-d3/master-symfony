@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
  * @ORM\HasLifecycleCallbacks()
+ * @ORM\EntityListeners({"App\EntityListener\ProductListener"})
  */
 class Product
 {
