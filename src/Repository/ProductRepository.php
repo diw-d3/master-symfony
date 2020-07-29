@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\DBAL\FetchMode;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -66,5 +67,15 @@ class ProductRepository extends ServiceEntityRepository
         $stmt->execute(['price' => $price]);
 
         return $stmt->fetchAll(FetchMode::CUSTOM_OBJECT, Product::class);
+    }
+
+    public function findAllWithPagination(int $page)
+    {
+        $q = $this->createQueryBuilder('p')
+            ->setFirstResult(($page - 1) * 10)
+            ->setMaxResults(10);
+
+        // return $q->getQuery()->getResult();
+        return new Paginator($q);
     }
 }

@@ -77,6 +77,21 @@ class ProductController extends AbstractController
     }
 
     /**
+     * @Route("/product/{page}", name="product_list")
+     */
+    public function list($page = 1, ProductRepository $productRepository)
+    {
+        $products = $productRepository->findAllWithPagination($page);
+        $maxPage = ceil(count($products) / 10);
+
+        return $this->render('product/list.html.twig', [
+            'products' => $products,
+            'max_page' => $maxPage,
+            'page' => $page,
+        ]);
+    }
+
+    /**
      * @Route("/product/{slug}", name="product_show")
      */
     public function show(Product $product, ProductRepository $productRepository)
@@ -90,18 +105,6 @@ class ProductController extends AbstractController
 
         return $this->render('product/show.html.twig', [
             'product' => $product,
-        ]);
-    }
-
-    /**
-     * @Route("/product", name="product_list")
-     */
-    public function list(ProductRepository $productRepository)
-    {
-        $products = $productRepository->findAll();
-
-        return $this->render('product/list.html.twig', [
-            'products' => $products,
         ]);
     }
 }

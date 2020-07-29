@@ -42,5 +42,19 @@
                 </div>
             {% endfor %}
         </div>
+
+        <nav class="mt-5">
+            <ul class="pagination">
+                {% if page > 1 %}
+                    <li class="page-item"><a class="page-link" href="{{ path('product_list', { page: page - 1 }) }}">Page précédente</a></li>
+                {% endif %}
+                {% for page in 1..max_page %}
+                    <li class="page-item"><a class="page-link" href="{{ path('product_list', { page: page }) }}">{{ page }}</a></li>
+                {% endfor %}
+                {% if page < max_page %}
+                    <li class="page-item"><a class="page-link" href="{{ path('product_list', { page: page + 1 }) }}">Page suivante</a></li>
+                {% endif %}
+            </ul>
+        </nav>
     </div>
 {% endblock %}
