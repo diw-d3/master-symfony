@@ -8,6 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class Product
 {
@@ -100,5 +101,13 @@ class Product
         $this->slug = $slug;
 
         return $this;
+    }
+
+    /**
+     * @ORM\PrePersist()
+     */
+    public function setCreatedAtValue()
+    {
+        $this->createdAt = new \DateTime();
     }
 }

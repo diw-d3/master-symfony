@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\DBAL\FetchMode;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -19,32 +20,51 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
-    // /**
-    //  * @return Product[] Returns an array of Product objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function findAllGreatherThanPrice($price): array
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $queryBuilder = $this->createQueryBuilder('p')
+            ->where('p.price > :price')
+            ->setParameter('price', $price * 100)
+            ->orderBy('p.price', 'ASC')
+            ->getQuery();
 
-    /*
-    public function findOneBySomeField($value): ?Product
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        return $queryBuilder->getResult();
     }
-    */
+
+    public function findOneGreatherThanPrice($price): ?Product
+    {
+        $queryBuilder = $this->createQueryBuilder('p')
+            ->where('p.price > :price')
+            ->setParameter('price', $price * 100)
+            ->orderBy('p.price', 'ASC')
+            ->getQuery();
+
+        return $queryBuilder->setMaxResults(1)->getOneOrNullResult();
+    }
+
+    public function findOneExpensive(): ?Product
+    {
+        // 'SELECT * FROM product p WHERE p.price = (SELECT MAX(product.price) FROM product);';
+        $subquery = $this->createQueryBuilder('p1')
+            ->select('MAX(p1.price)');
+
+        $queryBuilder = $this->createQueryBuilder('p2')
+            ->where(
+                'p2.price = (SELECT MAX(p1.price) FROM App\Entity\Product p1)'
+            )
+            ->getQuery();
+
+        return $queryBuilder->getOneOrNullResult();
+    }
+
+    public function findAllAsPDO($price)
+    {
+        $db = $this->getEntityManager()->getConnection();
+
+        $sql = 'SELECT * FROM product WHERE price > :price';
+        $stmt = $db->prepare($sql);
+        $stmt->execute(['price' => $price]);
+
+        return $stmt->fetchAll(FetchMode::CUSTOM_OBJECT, Product::class);
+    }
 }
