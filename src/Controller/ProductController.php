@@ -36,6 +36,41 @@ class ProductController extends AbstractController
     }
 
     /**
+     * @Route("/product/edit/{id}", name="product_edit")
+     */
+    public function edit(Request $request, Product $product, EntityManagerInterface $entityManager)
+    {
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->flush();
+
+            return $this->redirectToRoute('product_list');
+        }
+
+        return $this->render('product/edit.html.twig', [
+            'form' => $form->createView(),
+            'product' => $product,
+        ]);
+    }
+
+    /**
+     * @Route("/product/delete/{id}", name="product_delete")
+     */
+    public function delete(Request $request, Product $product, EntityManagerInterface $entityManager)
+    {
+        $token = $request->get('token');
+
+        if ($this->isCsrfTokenValid('delete-product-'.$product->getId(), $token)) {
+            $entityManager->remove($product);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('product_list');
+    }
+
+    /**
      * @Route("/product/{id}", name="product_show")
      */
     public function show(Product $product, ProductRepository $productRepository)
