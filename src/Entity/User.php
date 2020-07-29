@@ -25,7 +25,7 @@ class User
     private $username;
 
     /**
-     * @ORM\OneToMany(targetEntity=Product::class, mappedBy="user")
+     * @ORM\OneToMany(targetEntity=Product::class, mappedBy="user", cascade={"persist"})
      */
     private $products;
 

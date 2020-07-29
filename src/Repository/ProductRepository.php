@@ -88,4 +88,14 @@ class ProductRepository extends ServiceEntityRepository
 
         return $qb->getResult();
     }
+
+    public function findAll()
+    {
+        $qb = $this->createQueryBuilder('p')
+            ->leftJoin('p.user', 'u')
+            ->addSelect('u')
+            ->getQuery();
+
+        return $qb->getResult();
+    }
 }

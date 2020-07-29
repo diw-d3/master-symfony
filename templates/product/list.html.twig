@@ -11,6 +11,9 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ product.name }}</h5>
                             <p>{{ product.description }}</p>
+                            {% if product.user %}
+                                <p>Produit créé par {{ product.user.username }}</p>
+                            {% endif %}
                             <p><strong>{{ product.price / 100 }} €</strong></p>
 
                             <a href="{{ path('product_show', {slug: product.slug}) }}"

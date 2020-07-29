@@ -5,5 +5,14 @@
 {% block body %}
     <div class="container py-5">
         <h1>{{ product.name }}</h1>
+
+        {% if product.user %}
+            <p>Produit créé par {{ product.user.username }}</p>
+        {% endif %}
+
+        <h3>Les autres produits de l'utilisateur</h3>
+        {% for product in product.user.products | filter(p => p.id != product.id) %}
+            {{ product.name }}
+        {% endfor %}
     </div>
 {% endblock %}

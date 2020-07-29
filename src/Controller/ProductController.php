@@ -81,7 +81,8 @@ class ProductController extends AbstractController
      */
     public function list($page = 1, ProductRepository $productRepository)
     {
-        $products = $productRepository->findAllWithPagination($page);
+        // $products = $productRepository->findAllWithPagination($page);
+        $products = $productRepository->findAll();
         $maxPage = ceil(count($products) / 10);
 
         return $this->render('product/list.html.twig', [
@@ -102,6 +103,8 @@ class ProductController extends AbstractController
         // if (!$product) {
         //     throw $this->createNotFoundException();
         // }
+
+        dump($product->getUser()->getUsername());
 
         return $this->render('product/show.html.twig', [
             'product' => $product,
