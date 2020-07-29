@@ -21,6 +21,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
             $product->setDescription($faker->text);
             $product->setPrice($faker->numberBetween(10, 1000) * 100);
             $product->setUser($this->getReference('user-'.rand(1, 10)));
+            $product->setCategory($this->getReference('category-'.rand(1, 10)));
             $manager->persist($product);
         }
 
@@ -29,6 +30,8 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
 
     public function getDependencies()
     {
-        return [UserFixtures::class];
+        return [
+            UserFixtures::class, CategoryFixtures::class,
+        ];
     }
 }
