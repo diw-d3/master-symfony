@@ -21,7 +21,7 @@ class HomeController extends AbstractController
         dump($repository->findAllAsPDO(500));
 
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
+            'products' => $repository->findMoreExpensive(),
         ]);
     }
 }

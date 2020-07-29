@@ -78,4 +78,14 @@ class ProductRepository extends ServiceEntityRepository
         // return $q->getQuery()->getResult();
         return new Paginator($q);
     }
+
+    public function findMoreExpensive($number = 4)
+    {
+        $qb = $this->createQueryBuilder('p')
+            ->orderBy('p.price', 'DESC')
+            ->setMaxResults($number)
+            ->getQuery();
+
+        return $qb->getResult();
+    }
 }
