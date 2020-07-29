@@ -3,9 +3,11 @@
 {% block title %}Créer un produit - {{ parent() }}{% endblock %}
 
 {% block body %}
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
+    <div class="container py-5">
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
 
-        <button formnovalidate>Créer le produit</button>
-    {{ form_end(form) }}
+            <button formnovalidate class="btn btn-primary">Créer le produit</button>
+        {{ form_end(form) }}
+    </div>
 {% endblock %}
