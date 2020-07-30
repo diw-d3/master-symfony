@@ -94,6 +94,7 @@ class ProductRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('p')
             ->leftJoin('p.user', 'u')
             ->addSelect('u')
+            ->orderBy('p.id', 'DESC')
             ->getQuery();
 
         return $qb->getResult();

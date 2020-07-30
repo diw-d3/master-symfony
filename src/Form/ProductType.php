@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Product;
+use App\Form\Type\TagsInputType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -26,9 +27,7 @@ class ProductType extends AbstractType
                     return $category->getName();
                 },
             ])
-            ->add('tags', null, [
-                'expanded' => true,
-            ])
+            ->add('tags', TagsInputType::class)
             ->add('price', MoneyType::class, [
                 'divisor' => 100,
             ])

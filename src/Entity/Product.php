@@ -64,7 +64,7 @@ class Product
     private $category;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Tag::class, inversedBy="products")
+     * @ORM\ManyToMany(targetEntity=Tag::class, inversedBy="products", cascade={"persist"})
      */
     private $tags;
 
