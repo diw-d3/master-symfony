@@ -26,8 +26,8 @@
                         {{ app.user.username }}
                     </li>
                 {% else %}
-                    <li class="nav-item {{ current_route == 'login' ? 'active' }}">
-                        <a class="nav-link" href="{{ path('login') }}">Login</a>
+                    <li class="nav-item {{ current_route == 'app_login' ? 'active' }}">
+                        <a class="nav-link" href="{{ path('app_login') }}">Login</a>
                     </li>
                 {% endif %}
             </ul>
