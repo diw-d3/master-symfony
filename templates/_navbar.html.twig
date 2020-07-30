@@ -19,6 +19,18 @@
                     <a class="nav-link" href="{{ path('product_create') }}">Créer un produit</a>
                 </li>
             </ul>
+
+            <ul class="navbar-nav ml-auto">
+                {% if app.user %}
+                    <li class="nav-item">
+                        {{ app.user.username }}
+                    </li>
+                {% else %}
+                    <li class="nav-item {{ current_route == 'login' ? 'active' }}">
+                        <a class="nav-link" href="{{ path('login') }}">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
         </div>
     </div>
 </nav>
