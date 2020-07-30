@@ -46,6 +46,8 @@ class ProductController extends AbstractController
      */
     public function edit(Request $request, Product $product, EntityManagerInterface $entityManager)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
 
@@ -66,6 +68,7 @@ class ProductController extends AbstractController
      */
     public function delete(Request $request, Product $product, EntityManagerInterface $entityManager)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         $token = $request->get('token');
 
         if ($this->isCsrfTokenValid('delete-product-'.$product->getId(), $token)) {

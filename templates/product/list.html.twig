@@ -17,29 +17,31 @@
                             <p><strong>{{ product.price / 100 }} €</strong></p>
 
                             <a href="{{ path('product_show', {slug: product.slug}) }}"
-                               class="btn btn-secondary"
+                                class="btn btn-secondary"
                             >
                                 Voir
                             </a>
-                            <a href="{{ path('product_edit', {id: product.id}) }}"
-                               class="btn btn-success"
-                            >
-                                Modifier
-                            </a>
-                            <!-- <a href="{{ path('product_delete', {id: product.id}) }}"
-                               class="btn btn-danger"
-                               onclick="return confirm('Etes-vous sûr ?')"
-                            >
-                                Supprimer
-                            </a> -->
-                            <form action="{{ path('product_delete', {id: product.id}) }}"
-                                  method="POST"
-                                  class="d-inline"
-                                  onclick="return confirm('Etes-vous sûr ?')"
-                            >
-                                <input type="hidden" name="token" value="{{ csrf_token('delete-product-' ~ product.id) }}">
-                                <button class="btn btn-danger">Supprimer</button>
-                            </form>
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <a href="{{ path('product_edit', {id: product.id}) }}"
+                                class="btn btn-success"
+                                >
+                                    Modifier
+                                </a>
+                                <!-- <a href="{{ path('product_delete', {id: product.id}) }}"
+                                class="btn btn-danger"
+                                onclick="return confirm('Etes-vous sûr ?')"
+                                >
+                                    Supprimer
+                                </a> -->
+                                <form action="{{ path('product_delete', {id: product.id}) }}"
+                                    method="POST"
+                                    class="d-inline"
+                                    onclick="return confirm('Etes-vous sûr ?')"
+                                >
+                                    <input type="hidden" name="token" value="{{ csrf_token('delete-product-' ~ product.id) }}">
+                                    <button class="btn btn-danger">Supprimer</button>
+                                </form>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
