@@ -4,10 +4,23 @@
 
 {% block body %}
     <div class="container py-5">
+        {#% form_theme form 'bootstrap_4_layout.html.twig' %#}
+
         {{ form_start(form) }}
+            <div class="row">
+                <div class="col-lg-6">
+                    {{ form_row(form.category) }}
+                </div>
+                <div class="col-lg-6">
+                    {{ form_label(form.name) }}
+                    {{ form_widget(form.name) }}
+                    {{ form_help(form.name) }}
+                </div>
+            </div>
+
             {{ form_widget(form) }}
 
             <button formnovalidate class="btn btn-primary">Créer le produit</button>
-        {{ form_end(form) }}
+        {{ form_end(form, {render_rest: true}) }}
     </div>
 {% endblock %}
