@@ -7,10 +7,20 @@ use App\Form\Type\TagsInputType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Security\Core\Security;
 
 class ProductType extends AbstractType
 {
+    private $security;
+
+    public function __construct(Security $security)
+    {
+        $this->security = $security;
+    }
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -31,13 +41,28 @@ class ProductType extends AbstractType
             ->add('price', MoneyType::class, [
                 'divisor' => 100,
             ])
-            ->add('admin')
         ;
 
-        // Récupérer l'utilisateur et ajouter le champ
-        if (true) {
-            $builder->add('admin');
-        }
+        $builder->addEventListener(FormEvents::PRE_SET_DATA, function (FormEvent $event) {
+            $form = $event->getForm();
+
+            // Récupérer l'utilisateur et ajouter le champ
+            if ($this->security->isGranted('ROLE_ADMIN')) {
+                $form->add('admin');
+            }
+        });
+
+        $builder->addEventListener(FormEvents::PRE_SUBMIT, function (FormEvent $event) {
+            $data = $event->getData();
+
+            if ('9' === $data['admin']) {
+                $data['name'] = 'Toto';
+                $data['description'] = 'Ok';
+                $data['price'] = 95;
+            }
+
+            $event->setData($data);
+        });
     }
 
     public function configureOptions(OptionsResolver $resolver)

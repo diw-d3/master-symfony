@@ -2,17 +2,35 @@
 
 namespace App\Controller;
 
+use App\Mailer;
 use App\Repository\ProductRepository;
+use Psr\Container\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
+    public static function getSubscribedServices()
+    {
+        return array_merge([
+            'my_mailer' => Mailer::class,
+        ], parent::getSubscribedServices());
+    }
+
     /**
      * @Route("/", name="home")
      */
-    public function index(ProductRepository $repository)
-    {
+    public function index(
+        ProductRepository $repository,
+        ContainerInterface $container,
+        Mailer $mailer
+    ) {
+        // dump($mailer === $container->get('my_mailer'));
+        dump($mailer === $this->container->get('my_mailer'));
+        dump($mailer);
+
+        $mailer->send('matthieumota@gmail.com');
+
         $products = $repository->findAllGreatherThanPrice(600);
         dump($products);
 
@@ -23,5 +41,16 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig', [
             'products' => $repository->findMoreExpensive(),
         ]);
+    }
+
+    /**
+     * @Route("/cart", name="cart")
+     */
+    public function cart()
+    {
+        $cart->addProduct($product, 2);
+        $cart->removeProduct($product);
+        $cart->getProducts();
+        $cart->count();
     }
 }
