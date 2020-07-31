@@ -45,3 +45,9 @@ services:
     #my_mailer:
     #    alias: App\Mailer
     #    public: true
+
+    App\Listener\MaintenanceListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, priority: 30 }
+            - { name: kernel.event_listener, event: kernel.controller }
+            - { name: kernel.event_listener, event: kernel.response }
