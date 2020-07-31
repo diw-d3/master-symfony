@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Users/matthieu/Code/demo-full/src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=".css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/style.css" rel="stylesheet" type="text/css">
+  <link href=".css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/Users/matthieu/Code/demo-full/src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/CategoryController.php.html#16">App\Controller\CategoryController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#10">App\Kernel</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/CategoryType.php.html#10">App\Form\CategoryType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ChangePasswordFormType.php.html#13">App\Form\ChangePasswordFormType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ProductType.php.html#15">App\Form\ProductType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationFormType.php.html#16">App\Form\RegistrationFormType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ResetPasswordRequestFormType.php.html#11">App\Form\ResetPasswordRequestFormType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/Type/TagsInputType.php.html#12">App\Form\Type\TagsInputType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Listener/SendEmailListener.php.html#7">App\Listener\SendEmailListener</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#13">App\Entity\User</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/AdminRepository.php.html#18">App\Repository\AdminRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/CategoryRepository.php.html#15">App\Repository\CategoryRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ResetPasswordRequestRepository.php.html#18">App\Repository\ResetPasswordRequestRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/TagRepository.php.html#15">App\Repository\TagRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#15">App\Repository\UserRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/EmailVerifier.php.html#13">App\Security\EmailVerifier</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Event/ProductCreated.php.html#8">App\Event\ProductCreated</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EntityListener/ProductListener.php.html#9">App\EntityListener\ProductListener</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#24">App\Controller\ResetPasswordController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#11">App\DataFixtures\AppFixtures</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#10">App\Controller\SecurityController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/TagController.php.html#13">App\Controller\TagController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#10">App\Controller\UserController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AdminFixtures.php.html#11">App\DataFixtures\AdminFixtures</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ProductController.php.html#16">App\Controller\ProductController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/CategoryFixtures.php.html#10">App\DataFixtures\CategoryFixtures</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegistrationController.php.html#19">App\Controller\RegistrationController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/TagFixtures.php.html#10">App\DataFixtures\TagFixtures</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/UserFixtures.php.html#10">App\DataFixtures\UserFixtures</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#16">App\Entity\Admin</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#13">App\Entity\Category</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/ResetPasswordRequest.php.html#13">App\Entity\ResetPasswordRequest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#17">App\Entity\Product</a></td><td class="text-right">9%</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#23">App\Security\LoginFormAuthenticator</a></td><td class="text-right">23%</td></tr>
+       <tr><td><a href="Repository/ProductRepository.php.html#17">App\Repository\ProductRepository</a></td><td class="text-right">30%</td></tr>
+       <tr><td><a href="Entity/Tag.php.html#14">App\Entity\Tag</a></td><td class="text-right">33%</td></tr>
+       <tr><td><a href="Controller/HomeController.php.html#13">App\Controller\HomeController</a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Listener/MaintenanceListener.php.html#13">App\Listener\MaintenanceListener</a></td><td class="text-right">55%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Entity/Product.php.html#17">App\Entity\Product</a></td><td class="text-right">835</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#16">App\Entity\Admin</a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="Entity/Category.php.html#13">App\Entity\Category</a></td><td class="text-right">420</td></tr>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#24">App\Controller\ResetPasswordController</a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="Entity/User.php.html#13">App\Entity\User</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="Controller/ProductController.php.html#16">App\Controller\ProductController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Controller/CategoryController.php.html#16">App\Controller\CategoryController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#23">App\Security\LoginFormAuthenticator</a></td><td class="text-right">89</td></tr>
+       <tr><td><a href="Entity/Tag.php.html#14">App\Entity\Tag</a></td><td class="text-right">54</td></tr>
+       <tr><td><a href="Repository/ProductRepository.php.html#17">App\Repository\ProductRepository</a></td><td class="text-right">44</td></tr>
+       <tr><td><a href="Controller/RegistrationController.php.html#19">App\Controller\RegistrationController</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Form/ProductType.php.html#15">App\Form\ProductType</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Kernel.php.html#10">App\Kernel</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#11">App\DataFixtures\AppFixtures</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Entity/ResetPasswordRequest.php.html#13">App\Entity\ResetPasswordRequest</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Listener/MaintenanceListener.php.html#13">App\Listener\MaintenanceListener</a></td><td class="text-right">19</td></tr>
+       <tr><td><a href="DataFixtures/CategoryFixtures.php.html#10">App\DataFixtures\CategoryFixtures</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="DataFixtures/AdminFixtures.php.html#11">App\DataFixtures\AdminFixtures</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Repository/AdminRepository.php.html#18">App\Repository\AdminRepository</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="DataFixtures/TagFixtures.php.html#10">App\DataFixtures\TagFixtures</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DataFixtures/UserFixtures.php.html#10">App\DataFixtures\UserFixtures</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Cart.php.html#44"><abbr title="App\Cart::count">count</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#37"><abbr title="App\Entity\User::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ChangePasswordFormType.php.html#45"><abbr title="App\Form\ChangePasswordFormType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ChangePasswordFormType.php.html#15"><abbr title="App\Form\ChangePasswordFormType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/CategoryType.php.html#21"><abbr title="App\Form\CategoryType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/CategoryType.php.html#12"><abbr title="App\Form\CategoryType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Event/ProductCreated.php.html#18"><abbr title="App\Event\ProductCreated::getProduct">getProduct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Event/ProductCreated.php.html#13"><abbr title="App\Event\ProductCreated::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EntityListener/ProductListener.php.html#18"><abbr title="App\EntityListener\ProductListener::prePersist">prePersist</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EntityListener/ProductListener.php.html#13"><abbr title="App\EntityListener\ProductListener::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#72"><abbr title="App\Entity\User::removeProduct">removeProduct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#62"><abbr title="App\Entity\User::addProduct">addProduct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#57"><abbr title="App\Entity\User::getProducts">getProducts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#47"><abbr title="App\Entity\User::setUsername">setUsername</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#42"><abbr title="App\Entity\User::getUsername">getUsername</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#32"><abbr title="App\Entity\User::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ProductType.php.html#24"><abbr title="App\Form\ProductType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Tag.php.html#77"><abbr title="App\Entity\Tag::removeProduct">removeProduct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Tag.php.html#67"><abbr title="App\Entity\Tag::addProduct">addProduct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Tag.php.html#62"><abbr title="App\Entity\Tag::getProducts">getProducts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Tag.php.html#42"><abbr title="App\Entity\Tag::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/ResetPasswordRequest.php.html#41"><abbr title="App\Entity\ResetPasswordRequest::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/ResetPasswordRequest.php.html#36"><abbr title="App\Entity\ResetPasswordRequest::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/ResetPasswordRequest.php.html#30"><abbr title="App\Entity\ResetPasswordRequest::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#206"><abbr title="App\Entity\Product::setAdmin">setAdmin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#201"><abbr title="App\Entity\Product::getAdmin">getAdmin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#192"><abbr title="App\Entity\Product::removeTag">removeTag</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#183"><abbr title="App\Entity\Product::addTag">addTag</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#178"><abbr title="App\Entity\Product::getTags">getTags</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#168"><abbr title="App\Entity\Product::setCategory">setCategory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#163"><abbr title="App\Entity\Product::getCategory">getCategory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ProductType.php.html#19"><abbr title="App\Form\ProductType::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ProductType.php.html#68"><abbr title="App\Form\ProductType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#151"><abbr title="App\Entity\Product::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ProductRepository.php.html#61"><abbr title="App\Repository\ProductRepository::findAllAsPDO">findAllAsPDO</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#93"><abbr title="App\Security\LoginFormAuthenticator::onAuthenticationSuccess">onAuthenticationSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#88"><abbr title="App\Security\LoginFormAuthenticator::getPassword">getPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#80"><abbr title="App\Security\LoginFormAuthenticator::checkCredentials">checkCredentials</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#63"><abbr title="App\Security\LoginFormAuthenticator::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#48"><abbr title="App\Security\LoginFormAuthenticator::getCredentials">getCredentials</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/EmailVerifier.php.html#46"><abbr title="App\Security\EmailVerifier::handleEmailConfirmation">handleEmailConfirmation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/EmailVerifier.php.html#26"><abbr title="App\Security\EmailVerifier::sendEmailConfirmation">sendEmailConfirmation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/EmailVerifier.php.html#19"><abbr title="App\Security\EmailVerifier::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#17"><abbr title="App\Repository\UserRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/TagRepository.php.html#17"><abbr title="App\Repository\TagRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ResetPasswordRequestRepository.php.html#27"><abbr title="App\Repository\ResetPasswordRequestRepository::createResetPasswordRequest">createResetPasswordRequest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ResetPasswordRequestRepository.php.html#22"><abbr title="App\Repository\ResetPasswordRequestRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ProductRepository.php.html#92"><abbr title="App\Repository\ProductRepository::findAll">findAll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ProductRepository.php.html#72"><abbr title="App\Repository\ProductRepository::findAllWithPagination">findAllWithPagination</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ProductRepository.php.html#46"><abbr title="App\Repository\ProductRepository::findOneExpensive">findOneExpensive</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationFormType.php.html#18"><abbr title="App\Form\RegistrationFormType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ProductRepository.php.html#35"><abbr title="App\Repository\ProductRepository::findOneGreatherThanPrice">findOneGreatherThanPrice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/CategoryRepository.php.html#17"><abbr title="App\Repository\CategoryRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/AdminRepository.php.html#28"><abbr title="App\Repository\AdminRepository::upgradePassword">upgradePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/AdminRepository.php.html#20"><abbr title="App\Repository\AdminRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Listener/SendEmailListener.php.html#9"><abbr title="App\Listener\SendEmailListener::onProductCreated">onProductCreated</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#27"><abbr title="App\Kernel::configureRoutes">configureRoutes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#14"><abbr title="App\Kernel::configureContainer">configureContainer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/Type/TagsInputType.php.html#37"><abbr title="App\Form\Type\TagsInputType::getParent">getParent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/Type/TagsInputType.php.html#28"><abbr title="App\Form\Type\TagsInputType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/Type/TagsInputType.php.html#21"><abbr title="App\Form\Type\TagsInputType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/Type/TagsInputType.php.html#16"><abbr title="App\Form\Type\TagsInputType::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ResetPasswordRequestFormType.php.html#26"><abbr title="App\Form\ResetPasswordRequestFormType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ResetPasswordRequestFormType.php.html#13"><abbr title="App\Form\ResetPasswordRequestFormType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationFormType.php.html#56"><abbr title="App\Form\RegistrationFormType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CategoryController.php.html#21"><abbr title="App\Controller\CategoryController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#156"><abbr title="App\Entity\Product::setUser">setUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#146"><abbr title="App\Entity\Product::setCreatedAtValue">setCreatedAtValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#62"><abbr title="App\Controller\ResetPasswordController::checkEmail">checkEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/TagFixtures.php.html#12"><abbr title="App\DataFixtures\TagFixtures::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/CategoryFixtures.php.html#12"><abbr title="App\DataFixtures\CategoryFixtures::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#37"><abbr title="App\DataFixtures\AppFixtures::getDependencies">getDependencies</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#13"><abbr title="App\DataFixtures\AppFixtures::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AdminFixtures.php.html#20"><abbr title="App\DataFixtures\AdminFixtures::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AdminFixtures.php.html#15"><abbr title="App\DataFixtures\AdminFixtures::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#15"><abbr title="App\Controller\UserController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/TagController.php.html#29"><abbr title="App\Controller\TagController::export">export</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/TagController.php.html#18"><abbr title="App\Controller\TagController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#32"><abbr title="App\Controller\SecurityController::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#15"><abbr title="App\Controller\SecurityController::login">login</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#133"><abbr title="App\Controller\ResetPasswordController::processSendingPasswordResetEmail">processSendingPasswordResetEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#79"><abbr title="App\Controller\ResetPasswordController::reset">reset</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#40"><abbr title="App\Controller\ResetPasswordController::request">request</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#136"><abbr title="App\Entity\Product::setSlug">setSlug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#30"><abbr title="App\Controller\ResetPasswordController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegistrationController.php.html#76"><abbr title="App\Controller\RegistrationController::verifyUserEmail">verifyUserEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegistrationController.php.html#31"><abbr title="App\Controller\RegistrationController::register">register</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegistrationController.php.html#23"><abbr title="App\Controller\RegistrationController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ProductController.php.html#108"><abbr title="App\Controller\ProductController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ProductController.php.html#92"><abbr title="App\Controller\ProductController::list">list</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ProductController.php.html#76"><abbr title="App\Controller\ProductController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ProductController.php.html#54"><abbr title="App\Controller\ProductController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ProductController.php.html#21"><abbr title="App\Controller\ProductController::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HomeController.php.html#51"><abbr title="App\Controller\HomeController::cart">cart</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CategoryController.php.html#84"><abbr title="App\Controller\CategoryController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CategoryController.php.html#64"><abbr title="App\Controller\CategoryController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CategoryController.php.html#54"><abbr title="App\Controller\CategoryController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/CategoryController.php.html#31"><abbr title="App\Controller\CategoryController::new">new</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/UserFixtures.php.html#12"><abbr title="App\DataFixtures\UserFixtures::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#51"><abbr title="App\Entity\Admin::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#56"><abbr title="App\Entity\Admin::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#106"><abbr title="App\Entity\Category::removeProduct">removeProduct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#64"><abbr title="App\Entity\Category::getDescription">getDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#69"><abbr title="App\Entity\Category::setDescription">setDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#76"><abbr title="App\Entity\Category::getSlug">getSlug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#81"><abbr title="App\Entity\Category::setSlug">setSlug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#91"><abbr title="App\Entity\Category::getProducts">getProducts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#96"><abbr title="App\Entity\Category::addProduct">addProduct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#119"><abbr title="App\Entity\Category::__toString">__toString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#52"><abbr title="App\Entity\Category::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#85"><abbr title="App\Entity\Product::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#90"><abbr title="App\Entity\Product::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#100"><abbr title="App\Entity\Product::setName">setName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#107"><abbr title="App\Entity\Product::getDescription">getDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#112"><abbr title="App\Entity\Product::setDescription">setDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Product.php.html#124"><abbr title="App\Entity\Product::setPrice">setPrice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#57"><abbr title="App\Entity\Category::setName">setName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#47"><abbr title="App\Entity\Category::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#61"><abbr title="App\Entity\Admin::getEmail">getEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#134"><abbr title="App\Entity\Admin::isVerified">isVerified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#66"><abbr title="App\Entity\Admin::setEmail">setEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#78"><abbr title="App\Entity\Admin::getUsername">getUsername</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#86"><abbr title="App\Entity\Admin::getRoles">getRoles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#95"><abbr title="App\Entity\Admin::setRoles">setRoles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#105"><abbr title="App\Entity\Admin::getPassword">getPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#110"><abbr title="App\Entity\Admin::setPassword">setPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#139"><abbr title="App\Entity\Admin::setIsVerified">setIsVerified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#42"><abbr title="App\Entity\Category::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#149"><abbr title="App\Entity\Admin::getProducts">getProducts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#154"><abbr title="App\Entity\Admin::addProduct">addProduct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#164"><abbr title="App\Entity\Admin::removeProduct">removeProduct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#177"><abbr title="App\Entity\Admin::__toString">__toString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#104"><abbr title="App\Security\LoginFormAuthenticator::getLoginUrl">getLoginUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Listener/MaintenanceListener.php.html#59"><abbr title="App\Listener\MaintenanceListener::onKernelResponse">onKernelResponse</abbr></a></td><td class="text-right">40%</td></tr>
+       <tr><td><a href="Listener/MaintenanceListener.php.html#35"><abbr title="App\Listener\MaintenanceListener::onKernelController">onKernelController</abbr></a></td><td class="text-right">44%</td></tr>
+       <tr><td><a href="Listener/MaintenanceListener.php.html#23"><abbr title="App\Listener\MaintenanceListener::onKernelRequest">onKernelRequest</abbr></a></td><td class="text-right">80%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#79"><abbr title="App\Controller\ResetPasswordController::reset">reset</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Form/ProductType.php.html#24"><abbr title="App\Form\ProductType::buildForm">buildForm</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/CategoryController.php.html#31"><abbr title="App\Controller\CategoryController::new">new</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/CategoryController.php.html#64"><abbr title="App\Controller\CategoryController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Category.php.html#106"><abbr title="App\Entity\Category::removeProduct">removeProduct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#164"><abbr title="App\Entity\Admin::removeProduct">removeProduct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/User.php.html#72"><abbr title="App\Entity\User::removeProduct">removeProduct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Kernel.php.html#14"><abbr title="App\Kernel::configureContainer">configureContainer</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="DataFixtures/CategoryFixtures.php.html#12"><abbr title="App\DataFixtures\CategoryFixtures::load">load</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#13"><abbr title="App\DataFixtures\AppFixtures::load">load</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Kernel.php.html#27"><abbr title="App\Kernel::configureRoutes">configureRoutes</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#133"><abbr title="App\Controller\ResetPasswordController::processSendingPasswordResetEmail">processSendingPasswordResetEmail</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#40"><abbr title="App\Controller\ResetPasswordController::request">request</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/RegistrationController.php.html#31"><abbr title="App\Controller\RegistrationController::register">register</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#63"><abbr title="App\Security\LoginFormAuthenticator::getUser">getUser</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ProductController.php.html#54"><abbr title="App\Controller\ProductController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ProductController.php.html#21"><abbr title="App\Controller\ProductController::create">create</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Listener/MaintenanceListener.php.html#35"><abbr title="App\Listener\MaintenanceListener::onKernelController">onKernelController</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Tag.php.html#67"><abbr title="App\Entity\Tag::addProduct">addProduct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Product.php.html#201"><abbr title="App\Entity\Product::getAdmin">getAdmin</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Product.php.html#206"><abbr title="App\Entity\Product::setAdmin">setAdmin</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#88"><abbr title="App\Security\LoginFormAuthenticator::getPassword">getPassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/ResetPasswordRequest.php.html#36"><abbr title="App\Entity\ResetPasswordRequest::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Tag.php.html#42"><abbr title="App\Entity\Tag::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#42"><abbr title="App\Entity\User::getUsername">getUsername</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Tag.php.html#77"><abbr title="App\Entity\Tag::removeProduct">removeProduct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#37"><abbr title="App\Entity\User::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Repository/AdminRepository.php.html#28"><abbr title="App\Repository\AdminRepository::upgradePassword">upgradePassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#62"><abbr title="App\Entity\User::addProduct">addProduct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Repository/ProductRepository.php.html#46"><abbr title="App\Repository\ProductRepository::findOneExpensive">findOneExpensive</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Product.php.html#183"><abbr title="App\Entity\Product::addTag">addTag</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Repository/ProductRepository.php.html#35"><abbr title="App\Repository\ProductRepository::findOneGreatherThanPrice">findOneGreatherThanPrice</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Product.php.html#192"><abbr title="App\Entity\Product::removeTag">removeTag</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Product.php.html#107"><abbr title="App\Entity\Product::getDescription">getDescription</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Product.php.html#168"><abbr title="App\Entity\Product::setCategory">setCategory</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Product.php.html#163"><abbr title="App\Entity\Product::getCategory">getCategory</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/CategoryController.php.html#84"><abbr title="App\Controller\CategoryController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/ProductController.php.html#76"><abbr title="App\Controller\ProductController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/RegistrationController.php.html#76"><abbr title="App\Controller\RegistrationController::verifyUserEmail">verifyUserEmail</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/ResetPasswordController.php.html#62"><abbr title="App\Controller\ResetPasswordController::checkEmail">checkEmail</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DataFixtures/AdminFixtures.php.html#20"><abbr title="App\DataFixtures\AdminFixtures::load">load</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DataFixtures/TagFixtures.php.html#12"><abbr title="App\DataFixtures\TagFixtures::load">load</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DataFixtures/UserFixtures.php.html#12"><abbr title="App\DataFixtures\UserFixtures::load">load</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#56"><abbr title="App\Entity\Admin::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#61"><abbr title="App\Entity\Admin::getEmail">getEmail</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Admin.php.html#154"><abbr title="App\Entity\Admin::addProduct">addProduct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Category.php.html#47"><abbr title="App\Entity\Category::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Category.php.html#52"><abbr title="App\Entity\Category::getName">getName</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Category.php.html#64"><abbr title="App\Entity\Category::getDescription">getDescription</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Category.php.html#69"><abbr title="App\Entity\Category::setDescription">setDescription</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Category.php.html#76"><abbr title="App\Entity\Category::getSlug">getSlug</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Category.php.html#96"><abbr title="App\Entity\Category::addProduct">addProduct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Product.php.html#90"><abbr title="App\Entity\Product::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Product.php.html#151"><abbr title="App\Entity\Product::getUser">getUser</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Product.php.html#156"><abbr title="App\Entity\Product::setUser">setUser</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#93"><abbr title="App\Security\LoginFormAuthenticator::onAuthenticationSuccess">onAuthenticationSuccess</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Listener/MaintenanceListener.php.html#23"><abbr title="App\Listener\MaintenanceListener::onKernelRequest">onKernelRequest</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Listener/MaintenanceListener.php.html#59"><abbr title="App\Listener\MaintenanceListener::onKernelResponse">onKernelResponse</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 6.1.4</a> using <a href="https://secure.php.net/" target="_top">PHPDBG 7.4.8</a> and <a href="https://phpunit.de/">PHPUnit 7.5.20</a> at Fri Jul 31 14:20:41 UTC 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src=".js/jquery.min.js" type="text/javascript"></script>
+  <script src=".js/d3.min.js" type="text/javascript"></script>
+  <script src=".js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([32,1,0,1,2,0,2,0,0,0,1,3], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([133,0,0,0,0,2,0,0,0,1,0,27], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[90.9090909090909,6,"<a href=\"Cart.php.html#8\">App\\Cart<\/a>"],[0,10,"<a href=\"Controller\/CategoryController.php.html#16\">App\\Controller\\CategoryController<\/a>"],[50,3,"<a href=\"Controller\/HomeController.php.html#13\">App\\Controller\\HomeController<\/a>"],[0,10,"<a href=\"Controller\/ProductController.php.html#16\">App\\Controller\\ProductController<\/a>"],[0,6,"<a href=\"Controller\/RegistrationController.php.html#19\">App\\Controller\\RegistrationController<\/a>"],[0,15,"<a href=\"Controller\/ResetPasswordController.php.html#24\">App\\Controller\\ResetPasswordController<\/a>"],[0,2,"<a href=\"Controller\/SecurityController.php.html#10\">App\\Controller\\SecurityController<\/a>"],[0,2,"<a href=\"Controller\/TagController.php.html#13\">App\\Controller\\TagController<\/a>"],[0,1,"<a href=\"Controller\/UserController.php.html#10\">App\\Controller\\UserController<\/a>"],[0,3,"<a href=\"DataFixtures\/AdminFixtures.php.html#11\">App\\DataFixtures\\AdminFixtures<\/a>"],[0,4,"<a href=\"DataFixtures\/AppFixtures.php.html#11\">App\\DataFixtures\\AppFixtures<\/a>"],[0,3,"<a href=\"DataFixtures\/CategoryFixtures.php.html#10\">App\\DataFixtures\\CategoryFixtures<\/a>"],[0,2,"<a href=\"DataFixtures\/TagFixtures.php.html#10\">App\\DataFixtures\\TagFixtures<\/a>"],[0,2,"<a href=\"DataFixtures\/UserFixtures.php.html#10\">App\\DataFixtures\\UserFixtures<\/a>"],[0,22,"<a href=\"Entity\/Admin.php.html#16\">App\\Entity\\Admin<\/a>"],[0,20,"<a href=\"Entity\/Category.php.html#13\">App\\Entity\\Category<\/a>"],[9.67741935483871,33,"<a href=\"Entity\/Product.php.html#17\">App\\Entity\\Product<\/a>"],[0,4,"<a href=\"Entity\/ResetPasswordRequest.php.html#13\">App\\Entity\\ResetPasswordRequest<\/a>"],[33.33333333333333,12,"<a href=\"Entity\/Tag.php.html#14\">App\\Entity\\Tag<\/a>"],[0,12,"<a href=\"Entity\/User.php.html#13\">App\\Entity\\User<\/a>"],[0,2,"<a href=\"EntityListener\/ProductListener.php.html#9\">App\\EntityListener\\ProductListener<\/a>"],[0,2,"<a href=\"Event\/ProductCreated.php.html#8\">App\\Event\\ProductCreated<\/a>"],[0,2,"<a href=\"Form\/CategoryType.php.html#10\">App\\Form\\CategoryType<\/a>"],[0,2,"<a href=\"Form\/ChangePasswordFormType.php.html#13\">App\\Form\\ChangePasswordFormType<\/a>"],[100,4,"<a href=\"Form\/DataTransformer\/TagsArrayToStringTransformer.php.html#9\">App\\Form\\DataTransformer\\TagsArrayToStringTransformer<\/a>"],[0,6,"<a href=\"Form\/ProductType.php.html#15\">App\\Form\\ProductType<\/a>"],[0,2,"<a href=\"Form\/RegistrationFormType.php.html#16\">App\\Form\\RegistrationFormType<\/a>"],[0,2,"<a href=\"Form\/ResetPasswordRequestFormType.php.html#11\">App\\Form\\ResetPasswordRequestFormType<\/a>"],[0,4,"<a href=\"Form\/Type\/TagsInputType.php.html#12\">App\\Form\\Type\\TagsInputType<\/a>"],[0,6,"<a href=\"Kernel.php.html#10\">App\\Kernel<\/a>"],[55.00000000000001,10,"<a href=\"Listener\/MaintenanceListener.php.html#13\">App\\Listener\\MaintenanceListener<\/a>"],[0,1,"<a href=\"Listener\/SendEmailListener.php.html#7\">App\\Listener\\SendEmailListener<\/a>"],[100,2,"<a href=\"Mailer.php.html#8\">App\\Mailer<\/a>"],[0,3,"<a href=\"Repository\/AdminRepository.php.html#18\">App\\Repository\\AdminRepository<\/a>"],[0,1,"<a href=\"Repository\/CategoryRepository.php.html#15\">App\\Repository\\CategoryRepository<\/a>"],[30,10,"<a href=\"Repository\/ProductRepository.php.html#17\">App\\Repository\\ProductRepository<\/a>"],[0,2,"<a href=\"Repository\/ResetPasswordRequestRepository.php.html#18\">App\\Repository\\ResetPasswordRequestRepository<\/a>"],[0,1,"<a href=\"Repository\/TagRepository.php.html#15\">App\\Repository\\TagRepository<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#15\">App\\Repository\\UserRepository<\/a>"],[0,3,"<a href=\"Security\/EmailVerifier.php.html#13\">App\\Security\\EmailVerifier<\/a>"],[23.076923076923077,13,"<a href=\"Security\/LoginFormAuthenticator.php.html#23\">App\\Security\\LoginFormAuthenticator<\/a>"],[100,1,"<a href=\"Slugify.php.html#5\">App\\Slugify<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Cart.php.html#12\">App\\Cart::__construct<\/a>"],[100,1,"<a href=\"Cart.php.html#17\">App\\Cart::addProduct<\/a>"],[100,2,"<a href=\"Cart.php.html#28\">App\\Cart::removeProduct<\/a>"],[100,1,"<a href=\"Cart.php.html#39\">App\\Cart::getProducts<\/a>"],[0,1,"<a href=\"Cart.php.html#44\">App\\Cart::count<\/a>"],[0,1,"<a href=\"Controller\/CategoryController.php.html#21\">App\\Controller\\CategoryController::index<\/a>"],[0,3,"<a href=\"Controller\/CategoryController.php.html#31\">App\\Controller\\CategoryController::new<\/a>"],[0,1,"<a href=\"Controller\/CategoryController.php.html#54\">App\\Controller\\CategoryController::show<\/a>"],[0,3,"<a href=\"Controller\/CategoryController.php.html#64\">App\\Controller\\CategoryController::edit<\/a>"],[0,2,"<a href=\"Controller\/CategoryController.php.html#84\">App\\Controller\\CategoryController::delete<\/a>"],[100,1,"<a href=\"Controller\/HomeController.php.html#15\">App\\Controller\\HomeController::getSubscribedServices<\/a>"],[100,1,"<a href=\"Controller\/HomeController.php.html#25\">App\\Controller\\HomeController::index<\/a>"],[0,1,"<a href=\"Controller\/HomeController.php.html#51\">App\\Controller\\HomeController::cart<\/a>"],[0,3,"<a href=\"Controller\/ProductController.php.html#21\">App\\Controller\\ProductController::create<\/a>"],[0,3,"<a href=\"Controller\/ProductController.php.html#54\">App\\Controller\\ProductController::edit<\/a>"],[0,2,"<a href=\"Controller\/ProductController.php.html#76\">App\\Controller\\ProductController::delete<\/a>"],[0,1,"<a href=\"Controller\/ProductController.php.html#92\">App\\Controller\\ProductController::list<\/a>"],[0,1,"<a href=\"Controller\/ProductController.php.html#108\">App\\Controller\\ProductController::show<\/a>"],[0,1,"<a href=\"Controller\/RegistrationController.php.html#23\">App\\Controller\\RegistrationController::__construct<\/a>"],[0,3,"<a href=\"Controller\/RegistrationController.php.html#31\">App\\Controller\\RegistrationController::register<\/a>"],[0,2,"<a href=\"Controller\/RegistrationController.php.html#76\">App\\Controller\\RegistrationController::verifyUserEmail<\/a>"],[0,1,"<a href=\"Controller\/ResetPasswordController.php.html#30\">App\\Controller\\ResetPasswordController::__construct<\/a>"],[0,3,"<a href=\"Controller\/ResetPasswordController.php.html#40\">App\\Controller\\ResetPasswordController::request<\/a>"],[0,2,"<a href=\"Controller\/ResetPasswordController.php.html#62\">App\\Controller\\ResetPasswordController::checkEmail<\/a>"],[0,6,"<a href=\"Controller\/ResetPasswordController.php.html#79\">App\\Controller\\ResetPasswordController::reset<\/a>"],[0,3,"<a href=\"Controller\/ResetPasswordController.php.html#133\">App\\Controller\\ResetPasswordController::processSendingPasswordResetEmail<\/a>"],[0,1,"<a href=\"Controller\/SecurityController.php.html#15\">App\\Controller\\SecurityController::login<\/a>"],[0,1,"<a href=\"Controller\/SecurityController.php.html#32\">App\\Controller\\SecurityController::logout<\/a>"],[0,1,"<a href=\"Controller\/TagController.php.html#18\">App\\Controller\\TagController::index<\/a>"],[0,1,"<a href=\"Controller\/TagController.php.html#29\">App\\Controller\\TagController::export<\/a>"],[0,1,"<a href=\"Controller\/UserController.php.html#15\">App\\Controller\\UserController::index<\/a>"],[0,1,"<a href=\"DataFixtures\/AdminFixtures.php.html#15\">App\\DataFixtures\\AdminFixtures::__construct<\/a>"],[0,2,"<a href=\"DataFixtures\/AdminFixtures.php.html#20\">App\\DataFixtures\\AdminFixtures::load<\/a>"],[0,3,"<a href=\"DataFixtures\/AppFixtures.php.html#13\">App\\DataFixtures\\AppFixtures::load<\/a>"],[0,1,"<a href=\"DataFixtures\/AppFixtures.php.html#37\">App\\DataFixtures\\AppFixtures::getDependencies<\/a>"],[0,3,"<a href=\"DataFixtures\/CategoryFixtures.php.html#12\">App\\DataFixtures\\CategoryFixtures::load<\/a>"],[0,2,"<a href=\"DataFixtures\/TagFixtures.php.html#12\">App\\DataFixtures\\TagFixtures::load<\/a>"],[0,2,"<a href=\"DataFixtures\/UserFixtures.php.html#12\">App\\DataFixtures\\UserFixtures::load<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#51\">App\\Entity\\Admin::__construct<\/a>"],[0,2,"<a href=\"Entity\/Admin.php.html#56\">App\\Entity\\Admin::getId<\/a>"],[0,2,"<a href=\"Entity\/Admin.php.html#61\">App\\Entity\\Admin::getEmail<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#66\">App\\Entity\\Admin::setEmail<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#78\">App\\Entity\\Admin::getUsername<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#86\">App\\Entity\\Admin::getRoles<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#95\">App\\Entity\\Admin::setRoles<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#105\">App\\Entity\\Admin::getPassword<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#110\">App\\Entity\\Admin::setPassword<\/a>"],[100,1,"<a href=\"Entity\/Admin.php.html#120\">App\\Entity\\Admin::getSalt<\/a>"],[100,1,"<a href=\"Entity\/Admin.php.html#128\">App\\Entity\\Admin::eraseCredentials<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#134\">App\\Entity\\Admin::isVerified<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#139\">App\\Entity\\Admin::setIsVerified<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#149\">App\\Entity\\Admin::getProducts<\/a>"],[0,2,"<a href=\"Entity\/Admin.php.html#154\">App\\Entity\\Admin::addProduct<\/a>"],[0,3,"<a href=\"Entity\/Admin.php.html#164\">App\\Entity\\Admin::removeProduct<\/a>"],[0,1,"<a href=\"Entity\/Admin.php.html#177\">App\\Entity\\Admin::__toString<\/a>"],[0,1,"<a href=\"Entity\/Category.php.html#42\">App\\Entity\\Category::__construct<\/a>"],[0,2,"<a href=\"Entity\/Category.php.html#47\">App\\Entity\\Category::getId<\/a>"],[0,2,"<a href=\"Entity\/Category.php.html#52\">App\\Entity\\Category::getName<\/a>"],[0,1,"<a href=\"Entity\/Category.php.html#57\">App\\Entity\\Category::setName<\/a>"],[0,2,"<a href=\"Entity\/Category.php.html#64\">App\\Entity\\Category::getDescription<\/a>"],[0,2,"<a href=\"Entity\/Category.php.html#69\">App\\Entity\\Category::setDescription<\/a>"],[0,2,"<a href=\"Entity\/Category.php.html#76\">App\\Entity\\Category::getSlug<\/a>"],[0,1,"<a href=\"Entity\/Category.php.html#81\">App\\Entity\\Category::setSlug<\/a>"],[0,1,"<a href=\"Entity\/Category.php.html#91\">App\\Entity\\Category::getProducts<\/a>"],[0,2,"<a href=\"Entity\/Category.php.html#96\">App\\Entity\\Category::addProduct<\/a>"],[0,3,"<a href=\"Entity\/Category.php.html#106\">App\\Entity\\Category::removeProduct<\/a>"],[0,1,"<a href=\"Entity\/Category.php.html#119\">App\\Entity\\Category::__toString<\/a>"],[0,1,"<a href=\"Entity\/Product.php.html#85\">App\\Entity\\Product::__construct<\/a>"],[0,2,"<a href=\"Entity\/Product.php.html#90\">App\\Entity\\Product::getId<\/a>"],[100,2,"<a href=\"Entity\/Product.php.html#95\">App\\Entity\\Product::getName<\/a>"],[0,1,"<a href=\"Entity\/Product.php.html#100\">App\\Entity\\Product::setName<\/a>"],[0,2,"<a href=\"Entity\/Product.php.html#107\">App\\Entity\\Product::getDescription<\/a>"],[0,1,"<a href=\"Entity\/Product.php.html#112\">App\\Entity\\Product::setDescription<\/a>"],[100,2,"<a href=\"Entity\/Product.php.html#119\">App\\Entity\\Product::getPrice<\/a>"],[0,1,"<a href=\"Entity\/Product.php.html#124\">App\\Entity\\Product::setPrice<\/a>"],[100,2,"<a href=\"Entity\/Product.php.html#131\">App\\Entity\\Product::getSlug<\/a>"],[0,1,"<a href=\"Entity\/Product.php.html#136\">App\\Entity\\Product::setSlug<\/a>"],[0,1,"<a href=\"Entity\/Product.php.html#146\">App\\Entity\\Product::setCreatedAtValue<\/a>"],[0,2,"<a href=\"Entity\/Product.php.html#151\">App\\Entity\\Product::getUser<\/a>"],[0,2,"<a href=\"Entity\/Product.php.html#156\">App\\Entity\\Product::setUser<\/a>"],[0,2,"<a href=\"Entity\/Product.php.html#163\">App\\Entity\\Product::getCategory<\/a>"],[0,2,"<a href=\"Entity\/Product.php.html#168\">App\\Entity\\Product::setCategory<\/a>"],[0,1,"<a href=\"Entity\/Product.php.html#178\">App\\Entity\\Product::getTags<\/a>"],[0,2,"<a href=\"Entity\/Product.php.html#183\">App\\Entity\\Product::addTag<\/a>"],[0,2,"<a href=\"Entity\/Product.php.html#192\">App\\Entity\\Product::removeTag<\/a>"],[0,2,"<a href=\"Entity\/Product.php.html#201\">App\\Entity\\Product::getAdmin<\/a>"],[0,2,"<a href=\"Entity\/Product.php.html#206\">App\\Entity\\Product::setAdmin<\/a>"],[0,1,"<a href=\"Entity\/ResetPasswordRequest.php.html#30\">App\\Entity\\ResetPasswordRequest::__construct<\/a>"],[0,2,"<a href=\"Entity\/ResetPasswordRequest.php.html#36\">App\\Entity\\ResetPasswordRequest::getId<\/a>"],[0,1,"<a href=\"Entity\/ResetPasswordRequest.php.html#41\">App\\Entity\\ResetPasswordRequest::getUser<\/a>"],[100,1,"<a href=\"Entity\/Tag.php.html#37\">App\\Entity\\Tag::__construct<\/a>"],[0,2,"<a href=\"Entity\/Tag.php.html#42\">App\\Entity\\Tag::getId<\/a>"],[100,2,"<a href=\"Entity\/Tag.php.html#47\">App\\Entity\\Tag::getName<\/a>"],[100,1,"<a href=\"Entity\/Tag.php.html#52\">App\\Entity\\Tag::setName<\/a>"],[0,1,"<a href=\"Entity\/Tag.php.html#62\">App\\Entity\\Tag::getProducts<\/a>"],[0,2,"<a href=\"Entity\/Tag.php.html#67\">App\\Entity\\Tag::addProduct<\/a>"],[0,2,"<a href=\"Entity\/Tag.php.html#77\">App\\Entity\\Tag::removeProduct<\/a>"],[100,1,"<a href=\"Entity\/Tag.php.html#87\">App\\Entity\\Tag::__toString<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#32\">App\\Entity\\User::__construct<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#37\">App\\Entity\\User::getId<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#42\">App\\Entity\\User::getUsername<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#47\">App\\Entity\\User::setUsername<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#57\">App\\Entity\\User::getProducts<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#62\">App\\Entity\\User::addProduct<\/a>"],[0,3,"<a href=\"Entity\/User.php.html#72\">App\\Entity\\User::removeProduct<\/a>"],[0,1,"<a href=\"EntityListener\/ProductListener.php.html#13\">App\\EntityListener\\ProductListener::__construct<\/a>"],[0,1,"<a href=\"EntityListener\/ProductListener.php.html#18\">App\\EntityListener\\ProductListener::prePersist<\/a>"],[0,1,"<a href=\"Event\/ProductCreated.php.html#13\">App\\Event\\ProductCreated::__construct<\/a>"],[0,1,"<a href=\"Event\/ProductCreated.php.html#18\">App\\Event\\ProductCreated::getProduct<\/a>"],[0,1,"<a href=\"Form\/CategoryType.php.html#12\">App\\Form\\CategoryType::buildForm<\/a>"],[0,1,"<a href=\"Form\/CategoryType.php.html#21\">App\\Form\\CategoryType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/ChangePasswordFormType.php.html#15\">App\\Form\\ChangePasswordFormType::buildForm<\/a>"],[0,1,"<a href=\"Form\/ChangePasswordFormType.php.html#45\">App\\Form\\ChangePasswordFormType::configureOptions<\/a>"],[100,1,"<a href=\"Form\/DataTransformer\/TagsArrayToStringTransformer.php.html#13\">App\\Form\\DataTransformer\\TagsArrayToStringTransformer::__construct<\/a>"],[100,1,"<a href=\"Form\/DataTransformer\/TagsArrayToStringTransformer.php.html#22\">App\\Form\\DataTransformer\\TagsArrayToStringTransformer::transform<\/a>"],[100,2,"<a href=\"Form\/DataTransformer\/TagsArrayToStringTransformer.php.html#34\">App\\Form\\DataTransformer\\TagsArrayToStringTransformer::reverseTransform<\/a>"],[0,1,"<a href=\"Form\/ProductType.php.html#19\">App\\Form\\ProductType::__construct<\/a>"],[0,4,"<a href=\"Form\/ProductType.php.html#24\">App\\Form\\ProductType::buildForm<\/a>"],[0,1,"<a href=\"Form\/ProductType.php.html#68\">App\\Form\\ProductType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/RegistrationFormType.php.html#18\">App\\Form\\RegistrationFormType::buildForm<\/a>"],[0,1,"<a href=\"Form\/RegistrationFormType.php.html#56\">App\\Form\\RegistrationFormType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/ResetPasswordRequestFormType.php.html#13\">App\\Form\\ResetPasswordRequestFormType::buildForm<\/a>"],[0,1,"<a href=\"Form\/ResetPasswordRequestFormType.php.html#26\">App\\Form\\ResetPasswordRequestFormType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/Type\/TagsInputType.php.html#16\">App\\Form\\Type\\TagsInputType::__construct<\/a>"],[0,1,"<a href=\"Form\/Type\/TagsInputType.php.html#21\">App\\Form\\Type\\TagsInputType::buildForm<\/a>"],[0,1,"<a href=\"Form\/Type\/TagsInputType.php.html#28\">App\\Form\\Type\\TagsInputType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/Type\/TagsInputType.php.html#37\">App\\Form\\Type\\TagsInputType::getParent<\/a>"],[0,3,"<a href=\"Kernel.php.html#14\">App\\Kernel::configureContainer<\/a>"],[0,3,"<a href=\"Kernel.php.html#27\">App\\Kernel::configureRoutes<\/a>"],[100,1,"<a href=\"Listener\/MaintenanceListener.php.html#18\">App\\Listener\\MaintenanceListener::__construct<\/a>"],[80,3,"<a href=\"Listener\/MaintenanceListener.php.html#23\">App\\Listener\\MaintenanceListener::onKernelRequest<\/a>"],[44.44444444444444,4,"<a href=\"Listener\/MaintenanceListener.php.html#35\">App\\Listener\\MaintenanceListener::onKernelController<\/a>"],[40,2,"<a href=\"Listener\/MaintenanceListener.php.html#59\">App\\Listener\\MaintenanceListener::onKernelResponse<\/a>"],[0,1,"<a href=\"Listener\/SendEmailListener.php.html#9\">App\\Listener\\SendEmailListener::onProductCreated<\/a>"],[100,1,"<a href=\"Mailer.php.html#13\">App\\Mailer::__construct<\/a>"],[100,1,"<a href=\"Mailer.php.html#19\">App\\Mailer::send<\/a>"],[0,1,"<a href=\"Repository\/AdminRepository.php.html#20\">App\\Repository\\AdminRepository::__construct<\/a>"],[0,2,"<a href=\"Repository\/AdminRepository.php.html#28\">App\\Repository\\AdminRepository::upgradePassword<\/a>"],[0,1,"<a href=\"Repository\/CategoryRepository.php.html#17\">App\\Repository\\CategoryRepository::__construct<\/a>"],[100,1,"<a href=\"Repository\/ProductRepository.php.html#19\">App\\Repository\\ProductRepository::__construct<\/a>"],[100,1,"<a href=\"Repository\/ProductRepository.php.html#24\">App\\Repository\\ProductRepository::findAllGreatherThanPrice<\/a>"],[0,2,"<a href=\"Repository\/ProductRepository.php.html#35\">App\\Repository\\ProductRepository::findOneGreatherThanPrice<\/a>"],[0,2,"<a href=\"Repository\/ProductRepository.php.html#46\">App\\Repository\\ProductRepository::findOneExpensive<\/a>"],[0,1,"<a href=\"Repository\/ProductRepository.php.html#61\">App\\Repository\\ProductRepository::findAllAsPDO<\/a>"],[0,1,"<a href=\"Repository\/ProductRepository.php.html#72\">App\\Repository\\ProductRepository::findAllWithPagination<\/a>"],[100,1,"<a href=\"Repository\/ProductRepository.php.html#82\">App\\Repository\\ProductRepository::findMoreExpensive<\/a>"],[0,1,"<a href=\"Repository\/ProductRepository.php.html#92\">App\\Repository\\ProductRepository::findAll<\/a>"],[0,1,"<a href=\"Repository\/ResetPasswordRequestRepository.php.html#22\">App\\Repository\\ResetPasswordRequestRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/ResetPasswordRequestRepository.php.html#27\">App\\Repository\\ResetPasswordRequestRepository::createResetPasswordRequest<\/a>"],[0,1,"<a href=\"Repository\/TagRepository.php.html#17\">App\\Repository\\TagRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#17\">App\\Repository\\UserRepository::__construct<\/a>"],[0,1,"<a href=\"Security\/EmailVerifier.php.html#19\">App\\Security\\EmailVerifier::__construct<\/a>"],[0,1,"<a href=\"Security\/EmailVerifier.php.html#26\">App\\Security\\EmailVerifier::sendEmailConfirmation<\/a>"],[0,1,"<a href=\"Security\/EmailVerifier.php.html#46\">App\\Security\\EmailVerifier::handleEmailConfirmation<\/a>"],[100,1,"<a href=\"Security\/LoginFormAuthenticator.php.html#34\">App\\Security\\LoginFormAuthenticator::__construct<\/a>"],[100,2,"<a href=\"Security\/LoginFormAuthenticator.php.html#42\">App\\Security\\LoginFormAuthenticator::supports<\/a>"],[0,1,"<a href=\"Security\/LoginFormAuthenticator.php.html#48\">App\\Security\\LoginFormAuthenticator::getCredentials<\/a>"],[0,3,"<a href=\"Security\/LoginFormAuthenticator.php.html#63\">App\\Security\\LoginFormAuthenticator::getUser<\/a>"],[0,1,"<a href=\"Security\/LoginFormAuthenticator.php.html#80\">App\\Security\\LoginFormAuthenticator::checkCredentials<\/a>"],[0,2,"<a href=\"Security\/LoginFormAuthenticator.php.html#88\">App\\Security\\LoginFormAuthenticator::getPassword<\/a>"],[0,2,"<a href=\"Security\/LoginFormAuthenticator.php.html#93\">App\\Security\\LoginFormAuthenticator::onAuthenticationSuccess<\/a>"],[0,1,"<a href=\"Security\/LoginFormAuthenticator.php.html#104\">App\\Security\\LoginFormAuthenticator::getLoginUrl<\/a>"],[100,1,"<a href=\"Slugify.php.html#7\">App\\Slugify::slugify<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

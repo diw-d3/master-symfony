@@ -6,7 +6,7 @@
 <div class="container py-5">
     <h2>Les produits les plus chers</h2>
     <div class="row">
-        {% for product in products %}
+        {% for product in products | slice(0, 4) %}
             <div class="col-lg-3">
                 <div class="card mt-3 shadow">
                     <div class="card-body">
