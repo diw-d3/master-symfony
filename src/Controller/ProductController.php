@@ -28,6 +28,9 @@ class ProductController extends AbstractController
                 $slugger->slug($product->getName())->lower()
             );
 
+            // On associe l'utilisateur connecté au produit ??
+            $product->setAdmin($this->getUser());
+
             // $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($product);
             $entityManager->flush();

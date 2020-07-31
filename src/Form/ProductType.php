@@ -31,7 +31,13 @@ class ProductType extends AbstractType
             ->add('price', MoneyType::class, [
                 'divisor' => 100,
             ])
+            ->add('admin')
         ;
+
+        // Récupérer l'utilisateur et ajouter le champ
+        if (true) {
+            $builder->add('admin');
+        }
     }
 
     public function configureOptions(OptionsResolver $resolver)

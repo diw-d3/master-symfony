@@ -77,6 +77,11 @@ class Product
      */
     private $tags;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Admin::class, inversedBy="products")
+     */
+    private $admin;
+
     public function __construct()
     {
         $this->tags = new ArrayCollection();
@@ -189,6 +194,18 @@ class Product
         if ($this->tags->contains($tag)) {
             $this->tags->removeElement($tag);
         }
+
+        return $this;
+    }
+
+    public function getAdmin(): ?Admin
+    {
+        return $this->admin;
+    }
+
+    public function setAdmin(?Admin $admin): self
+    {
+        $this->admin = $admin;
 
         return $this;
     }
