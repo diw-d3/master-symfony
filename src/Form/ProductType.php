@@ -55,7 +55,7 @@ class ProductType extends AbstractType
         $builder->addEventListener(FormEvents::PRE_SUBMIT, function (FormEvent $event) {
             $data = $event->getData();
 
-            if ('9' === $data['admin']) {
+            if (isset($data['admin']) && '9' === $data['admin']) {
                 $data['name'] = 'Toto';
                 $data['description'] = 'Ok';
                 $data['price'] = 95;

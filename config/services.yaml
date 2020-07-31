@@ -51,3 +51,7 @@ services:
             - { name: kernel.event_listener, event: kernel.request, priority: 30 }
             - { name: kernel.event_listener, event: kernel.controller }
             - { name: kernel.event_listener, event: kernel.response }
+
+    App\Listener\SendEmailListener:
+        tags:
+            - { name: kernel.event_listener, event: product.created }
