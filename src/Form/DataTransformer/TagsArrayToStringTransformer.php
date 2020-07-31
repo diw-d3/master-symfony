@@ -17,6 +17,7 @@ class TagsArrayToStringTransformer implements DataTransformerInterface
 
     /**
      * On va de [] à une string
+     * ['a', 'b', 'c'] => a, b, c
      */
     public function transform($tags)
     {
@@ -25,10 +26,16 @@ class TagsArrayToStringTransformer implements DataTransformerInterface
 
     /**
      * On va d'une string à []
+     * a, b, c, d => [$a, $b, $c, $d]
+     * a,, b, c, d => ???
+     * a, a, a => ???
+     * '' => ???
      */
     public function reverseTransform($value)
     {
-        $names = array_map('trim', explode(',', $value)); // tag1, tag2, tag3
+        $names = array_filter(array_unique(
+            array_map('trim', explode(',', $value))
+        )); // tag1, tag2, tag3
         $tags = $this->repository->findByName($names);
         $names = array_diff($names, $tags);
 
