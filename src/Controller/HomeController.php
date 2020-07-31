@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Cart;
+use App\Entity\Product;
 use App\Mailer;
 use App\Repository\ProductRepository;
 use Psr\Container\ContainerInterface;
@@ -46,11 +48,17 @@ class HomeController extends AbstractController
     /**
      * @Route("/cart", name="cart")
      */
-    public function cart()
+    public function cart(Cart $cart)
     {
+        $product = $this->getDoctrine()->getRepository(Product::class)
+            ->findAll()[0];
+
         $cart->addProduct($product, 2);
         $cart->removeProduct($product);
-        $cart->getProducts();
-        $cart->count();
+
+        $cart->addProduct($product, 3);
+
+        dump($cart->getProducts()); // [...]
+        dump($cart->count()); // 3
     }
 }
