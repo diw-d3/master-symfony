@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Product;
 use App\Form\Type\TagsInputType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
@@ -31,6 +32,12 @@ class ProductType extends AbstractType
             ])
             ->add('slug')
             ->add('description')
+            ->add('image', FileType::class, [
+                'mapped' => false,
+                'attr' => [
+                    'placeholder' => 'Choisir une image',
+                ],
+            ])
             ->add('category', null, [
                 'expanded' => false,
                 'choice_label' => function ($category) {

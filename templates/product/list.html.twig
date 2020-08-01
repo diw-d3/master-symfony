@@ -9,6 +9,9 @@
                 <div class="col-lg-3">
                     <div class="card mt-3 shadow">
                         <div class="card-body">
+                            {% if product.image %}
+                            <img class="card-img-top" src="{{ asset('uploads/' ~ product.image) }}" alt="{{ product.name }}">
+                            {% endif %}
                             <h5 class="card-title">{{ product.name }}</h5>
                             <p>{{ product.description }}</p>
                             {% if product.user %}

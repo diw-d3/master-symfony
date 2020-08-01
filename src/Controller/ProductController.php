@@ -6,8 +6,10 @@ use App\Entity\Product;
 use App\Event\ProductCreated;
 use App\Form\ProductType;
 use App\Repository\ProductRepository;
+use App\Service\Uploader;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
@@ -18,8 +20,13 @@ class ProductController extends AbstractController
     /**
      * @Route("/product/create", name="product_create")
      */
-    public function create(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger, EventDispatcherInterface $dispatcher)
-    {
+    public function create(
+        Request $request,
+        EntityManagerInterface $entityManager,
+        SluggerInterface $slugger,
+        EventDispatcherInterface $dispatcher,
+        Uploader $uploader
+    ) {
         $product = new Product();
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
@@ -32,6 +39,14 @@ class ProductController extends AbstractController
 
             // On associe l'utilisateur connecté au produit ??
             $product->setAdmin($this->getUser());
+
+            // On fait l'upload...
+            /** @var UploadedFile $image */
+            if ($image = $form->get('image')->getData()) {
+                $fileName = $uploader->upload($image);
+                // Met à jour l'entité
+                $product->setImage($fileName);
+            }
 
             // $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($product);
@@ -51,7 +66,7 @@ class ProductController extends AbstractController
     /**
      * @Route("/product/edit/{id}", name="product_edit")
      */
-    public function edit(Request $request, Product $product, EntityManagerInterface $entityManager)
+    public function edit(Request $request, Product $product, EntityManagerInterface $entityManager, Uploader $uploader)
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
@@ -59,6 +74,19 @@ class ProductController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // On fait l'upload...
+            /** @var UploadedFile $image */
+            if ($image = $form->get('image')->getData()) {
+                // Supprimer l'image déjà existante
+                if ($product->getImage()) {
+                    $uploader->remove($product->getImage());
+                }
+
+                $fileName = $uploader->upload($image);
+                // Met à jour l'entité
+                $product->setImage($fileName);
+            }
+
             $entityManager->flush();
 
             return $this->redirectToRoute('product_list');
@@ -73,12 +101,16 @@ class ProductController extends AbstractController
     /**
      * @Route("/product/delete/{id}", name="product_delete")
      */
-    public function delete(Request $request, Product $product, EntityManagerInterface $entityManager)
+    public function delete(Request $request, Product $product, EntityManagerInterface $entityManager, Uploader $uploader)
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
         $token = $request->get('token');
 
         if ($this->isCsrfTokenValid('delete-product-'.$product->getId(), $token)) {
+            if ($product->getImage()) {
+                $uploader->remove($product->getImage());
+            }
+
             $entityManager->remove($product);
             $entityManager->flush();
         }

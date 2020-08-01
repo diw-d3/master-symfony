@@ -4,14 +4,22 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
             <link rel="stylesheet" href="{{ asset('css/tagsinput.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         {% endblock %}
     </head>
     <body>
-        {{ include('_navbar.html.twig') }}
+        {% block wrapper %}
+            <header>
+                {{ include('_navbar.html.twig') }}
+            </header>
 
-        {% block body %}{% endblock %}
+            <div class="container">
+                {% block body %}{% endblock %}
+            </div>
+        {% endblock %}
 
         {% block javascripts %}
             <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -19,28 +27,7 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
             <script src="{{ asset('js/tagsinput.js') }}"></script>
             <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
-
-            <script>
-                var tags = new Bloodhound({
-                    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
-                    queryTokenizer: Bloodhound.tokenizers.whitespace,
-                    prefetch: '/tag.json'
-                });
-                tags.initialize();
-
-                $('[data-role="tagsinput"]').tagsinput({
-                    typeaheadjs: {
-                        name: 'tags',
-                        displayKey: 'name',
-                        valueKey: 'name',
-                        source: tags.ttAdapter()
-                    }
-                });
-
-                $.ajax('/tag.json').done(function (tags) {
-                    console.log(tags);
-                });
-            </script>
+            <script src="{{ asset('js/app.js') }}"></script>
         {% endblock %}
     </body>
 </html>
